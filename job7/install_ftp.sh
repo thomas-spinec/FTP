@@ -1,9 +1,9 @@
 #!/bin/bash
 #setaf couleur police, setab couleur arrière plan
-echo -e "\e[1;5m$(tput setaf 4) $(tput setab 1) $(tput bold)veuillez passer en root pour que le script fonctionne correctement
-\e[0m"
+echo -e "$(tput setaf 4) $(tput setab 1) $(tput bold)veuillez passer en root pour que le script fonctionne correctement
+"
 echo -e "\e[5m$(tput setaf 4) $(tput setab 1)Ce message s'autodétruira dans 5 secondes. :D le script continuera ensuite.\e[0m"
-sleep 5
+sleep 10
 ##############################################
 #install proftpd et client filezilla
 apt install proftpd*; apt install filezilla
