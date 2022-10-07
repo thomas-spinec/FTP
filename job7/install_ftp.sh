@@ -1,8 +1,8 @@
 #!/bin/bash
 #setaf couleur police, setab couleur arrière plan
-echo -e "$(tput setaf 4) $(tput setab 1) $(tput bold)veuillez passer en root pour que le script fonctionne correctement
+echo "$(tput setaf 7) $(tput setab 4) $(tput bold)veuillez passer en root pour que le script fonctionne correctement
 "
-echo -e "\e[5m$(tput setaf 4) $(tput setab 1)Ce message s'autodétruira dans 5 secondes. :D le script continuera ensuite.\e[0m"
+echo -e "\e[5m$(tput setaf 7) $(tput setab 4) $(tput bold)Ce message s'autodétruira dans 10 secondes. :D le script continuera ensuite.\e[0m"
 sleep 10
 ##############################################
 #install proftpd et client filezilla
@@ -421,4 +421,7 @@ LoadModule mod_ifsession.c' > /etc/proftpd/modules.conf
 ##########################################
 #restart le serveur pour prendre en compte les modif
 systemctl restart proftpd
+
+##########################################
+echo "$(tput setaf 7) $(tput setab 4) $(tput bold)Le script est terminé. Si vous n'étiez pas en root, relancez le en root, sinon l'installation est terminée!"
 
